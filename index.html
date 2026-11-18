@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MAlert: Maternal Emergency Transport</title>
 <meta name="description" content="MAlert gets a pregnant woman in an emergency to the right health facility fast: one tap calls the nearest rider, and the facility is ready when she arrives.">
-<meta name="theme-color" content="#1b5e20">
+<meta name="theme-color" content="#0d3b24">
 <meta property="og:title" content="MAlert: help on the way when labour can't wait">
 <meta property="og:description" content="One tap calls the nearest rider. The facility is told she's coming. Built in Ghana for mothers, riders and health facilities.">
 <meta property="og:image" content="logo.png">
@@ -14,160 +14,191 @@
 <link rel="apple-touch-icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home">
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="./"><img src="logo.png" alt="" width="38" height="38">MAlert</a>
+    <a class="brand" href="./"><img src="logo.png" alt="" width="40" height="40">MAlert</a>
     <nav class="nav" aria-label="Main">
       <a href="#how">How it works</a>
       <a href="#who">Who it's for</a>
       <a href="#features">Features</a>
-      <a class="btn small" href="#download">Get the app</a>
+      <a class="btn gold small" href="#download">Get the app</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
   <section class="hero">
-    <div class="wrap">
-      <div>
-        <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Maternal emergency transport</span>
-        <h1>Help on the way when <span>labour can't wait.</span></h1>
-        <p class="lede">MAlert connects a pregnant woman in an emergency to the nearest trusted rider with one tap, and tells the health facility she's coming so they are ready when she arrives.</p>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="tag"><span class="pulse" aria-hidden="true"></span>Maternal emergency transport, built in Ghana</p>
+        <h1>Help on the way when labour can't wait.</h1>
+        <p class="lede">One tap calls the nearest trusted rider. The health facility is told she's coming, so they're ready when she arrives.</p>
         <div class="hero-actions">
-          <a class="btn" href="#download">Get the app</a>
-          <a class="btn ghost" href="#how">See how it works</a>
+          <a class="btn gold" href="#download">Get the app</a>
+          <a class="btn line" href="#how">See how it works</a>
         </div>
-        <p class="hero-note">Works in English, Twi and Dagbanli.</p>
+        <p class="langs">Speaks <b>English</b>, <b>Twi</b> and <b>Dagbanli</b></p>
       </div>
-      <div aria-hidden="true">
-        <div class="phone">
-          <div class="screen">
-            <span class="notch"></span>
-            <span class="greet">Good evening, Ama</span>
-            <span class="q">Do you need help now?</span>
-            <div class="sos">SOS</div>
-            <div class="status-card">
-              <b>Kwame is 4 min away</b>
-              Ridge Hospital is ready for you
-              <div class="bar"><i></i></div>
-            </div>
-          </div>
-        </div>
+
+      <div class="trip" aria-hidden="true">
+        <svg class="map" viewBox="0 0 440 480" preserveAspectRatio="xMidYMid slice">
+          <rect width="440" height="480" class="m-ground"/>
+          <path class="m-water" d="M-20 300 C 80 278, 150 345, 235 322 S 385 262, 460 292"/>
+          <g class="m-block">
+            <rect x="185" y="22" width="120" height="52" rx="10"/>
+            <rect x="20" y="20" width="110" height="128" rx="10"/>
+            <rect x="380" y="186" width="70" height="80" rx="10"/>
+            <rect x="290" y="420" width="90" height="70" rx="10"/>
+            <rect x="195" y="196" width="80" height="26" rx="8"/>
+          </g>
+          <g class="m-road">
+            <path d="M-10 412 C 120 400, 200 420, 300 380 S 420 330, 450 338"/>
+            <path d="M58 490 L 140 250 L 172 -10"/>
+            <path d="M-10 172 C 120 192, 260 142, 450 160"/>
+            <path d="M262 490 C 270 390, 300 300, 330 200 S 362 60, 384 -10"/>
+            <path d="M140 250 C 220 240, 280 230, 330 200"/>
+          </g>
+          <g class="m-lane">
+            <path d="M0 470 C 60 460, 90 470, 140 440"/>
+            <path d="M330 200 C 380 220, 410 240, 450 236"/>
+            <path d="M200 412 C 210 360, 230 300, 236 242"/>
+            <path d="M172 96 L 340 96"/>
+          </g>
+          <path class="route route-rider" pathLength="1" d="M430 336 C 400 342, 350 362, 300 380 C 230 406, 160 410, 90 405"/>
+          <path class="route route-trip" pathLength="1" d="M90 405 L 140 250 C 220 240, 280 230, 330 200 C 342 170, 348 140, 352 120"/>
+          <g class="pin-her">
+            <circle class="halo" cx="90" cy="405" r="22"/>
+            <circle cx="90" cy="405" r="11"/>
+          </g>
+          <path id="ride" fill="none" d="M430 336 C 400 342, 350 362, 300 380 C 230 406, 160 410, 90 405 L 140 250 C 220 240, 280 230, 330 200 C 342 170, 348 140, 352 120"/>
+          <g class="pin-rider">
+            <circle id="rider" cx="352" cy="120" r="8"/>
+          </g>
+          <g class="pin-facility">
+            <rect x="334" y="84" width="36" height="36" rx="9"/>
+            <path d="M352 92 v20 M342 102 h20"/>
+          </g>
+        </svg>
+
+        <div class="chip chip-sos"><span class="sos-dot">SOS</span><span><b>Ama asked for help</b>Voice note and location sent</span></div>
+        <div class="chip chip-rider"><span class="ico">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h2l3 7.5M5.5 17.5 9 10h5l4.5 7.5M12 6h3"/></svg>
+        </span><span><b>Kwame is 4 min away</b>Accepted the emergency</span></div>
+        <div class="chip chip-facility"><span class="ico ok">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </span><span><b>Ridge Hospital is ready</b>A bed is waiting for her</span></div>
       </div>
     </div>
   </section>
 
-  <section id="how" class="tint">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="kicker">How it works</span>
+  <section id="how" class="how">
+    <div class="wrap how-grid">
+      <div class="how-head">
         <h2>From the first sign of trouble to the delivery room.</h2>
         <p>Every minute counts in an obstetric emergency. MAlert takes the searching, calling and waiting out of getting there.</p>
       </div>
-      <div class="steps">
-        <article class="step">
+      <ol class="stops">
+        <li class="stop">
+          <span class="marker sos" aria-hidden="true"></span>
           <h3>She taps SOS</h3>
-          <p>She chooses the facility she wants, can record a short voice note saying what's wrong, and her location is shared automatically.</p>
-        </article>
-        <article class="step">
+          <p>She chooses the facility she wants and can record a short voice note saying what's wrong. Her location is shared automatically.</p>
+        </li>
+        <li class="stop">
+          <span class="marker rider" aria-hidden="true"></span>
           <h3>The nearest rider comes</h3>
           <p>Approved riders nearby are alerted at once. The first to accept is guided to her, and she watches the rider arrive on the map.</p>
-        </article>
-        <article class="step">
+        </li>
+        <li class="stop">
+          <span class="marker facility" aria-hidden="true"></span>
           <h3>The facility is ready</h3>
           <p>The facility gets her details as soon as she's on her way and confirms it's ready. If it has no bed, it sends her straight to another one.</p>
-        </article>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="who" class="who">
+    <div class="wrap">
+      <h2>One app for everyone who gets her there.</h2>
+      <div class="tabs" role="tablist" aria-label="Who MAlert is for">
+        <button role="tab" id="t-women" aria-controls="p-women" aria-selected="true">Pregnant women</button>
+        <button role="tab" id="t-riders" aria-controls="p-riders" aria-selected="false" tabindex="-1">Riders</button>
+        <button role="tab" id="t-facilities" aria-controls="p-facilities" aria-selected="false" tabindex="-1">Health facilities</button>
+        <button role="tab" id="t-communities" aria-controls="p-communities" aria-selected="false" tabindex="-1">Communities</button>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-women" aria-labelledby="t-women">
+        <p class="panel-lead">Help with one tap, even when you can't explain on the phone.</p>
+        <ul>
+          <li>Call for help with one tap, and say what's wrong in a voice note</li>
+          <li>See your rider coming and share the trip with family</li>
+          <li>Get health tips from your own facility, read aloud in your language</li>
+        </ul>
+      </div>
+      <div class="panel" role="tabpanel" id="p-riders" aria-labelledby="t-riders">
+        <p class="panel-lead">Emergencies that ring like a call, and pay for every trip.</p>
+        <ul>
+          <li>Emergency alerts that ring like a phone call, so none is missed</li>
+          <li>The route to her, then on to the facility, on the map</li>
+          <li>Get paid for every completed trip, with your earnings in one place</li>
+        </ul>
+      </div>
+      <div class="panel" role="tabpanel" id="p-facilities" aria-labelledby="t-facilities">
+        <p class="panel-lead">Know who's coming before she reaches the door.</p>
+        <ul>
+          <li>See who is coming, how far away she is, and what's wrong</li>
+          <li>Mark ready, or redirect her to another facility when you're full</li>
+          <li>Follow up your patients with visits, check-ins and audio tips</li>
+        </ul>
+      </div>
+      <div class="panel" role="tabpanel" id="p-communities" aria-labelledby="t-communities">
+        <p class="panel-lead">Committees and zone managers keep every ride covered.</p>
+        <ul>
+          <li>Chango committees cover rides for the women they enrol</li>
+          <li>Zone managers approve riders and step in when no one accepts</li>
+          <li>Clear records of every trip and payment</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section id="who">
+  <section id="features" class="features-sec">
     <div class="wrap">
-      <div class="section-head">
-        <span class="kicker">Who it's for</span>
-        <h2>One app, everyone who gets her there.</h2>
-      </div>
-      <div class="audiences">
-        <article class="audience">
-          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div>
-          <h3>Pregnant women</h3>
-          <ul>
-            <li>Call for help with one tap, even when you can't explain on the phone</li>
-            <li>See your rider coming and share the trip with family</li>
-            <li>Get health tips from your own facility, read aloud</li>
-          </ul>
-        </article>
-        <article class="audience">
-          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h2l3 7.5M5.5 17.5 9 10h5l4.5 7.5M12 6h3"/></svg></div>
-          <h3>Riders</h3>
-          <ul>
-            <li>Emergency alerts that ring like a call, so none is missed</li>
-            <li>The route to her, then on to the facility, on the map</li>
-            <li>Get paid for every completed trip, with your earnings in one place</li>
-          </ul>
-        </article>
-        <article class="audience">
-          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M10 9h4M12 7v4M9 21v-4h6v4"/></svg></div>
-          <h3>Health facilities</h3>
-          <ul>
-            <li>Know who is coming, how far away she is, and what's wrong</li>
-            <li>Mark ready, or redirect her to another facility when you're full</li>
-            <li>Follow up your patients with visits, check-ins and audio tips</li>
-          </ul>
-        </article>
-        <article class="audience">
-          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-          <h3>Communities and zone managers</h3>
-          <ul>
-            <li>Chango committees cover rides for the women they enrol</li>
-            <li>Zone managers approve riders and step in when no one accepts</li>
-            <li>Clear records of every trip and payment</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="features" class="tint">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="kicker">Features</span>
-        <h2>Built for real emergencies, on real roads.</h2>
-      </div>
+      <h2>Built for real emergencies, on real roads.</h2>
       <div class="features">
         <div class="feature">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
           <h3>Live tracking</h3>
           <p>She sees her rider approach, and family can follow the trip from a link in any browser.</p>
         </div>
         <div class="feature">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></svg>
           <h3>Voice notes</h3>
           <p>A few seconds of audio tells the rider and facility what to expect, without typing.</p>
         </div>
         <div class="feature">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
           <h3>Alerts that can't be missed</h3>
           <p>Riders' phones ring for an emergency, and facilities hear "she has arrived" read aloud.</p>
         </div>
         <div class="feature">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M21 3l-7 7M8 21H3v-5M3 21l7-7"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M21 3l-7 7M8 21H3v-5M3 21l7-7"/></svg>
           <h3>Facility redirect</h3>
           <p>A full facility sends her to the nearest open one in a tap, and her rider's route updates.</p>
         </div>
         <div class="feature">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
           <h3>Flexible payment</h3>
           <p>Mobile money, cash, or a Chango committee fund, settled after she's safely there.</p>
         </div>
         <div class="feature">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
           <h3>Her language</h3>
           <p>Spoken guidance in English, Twi and Dagbanli for women who prefer to listen.</p>
         </div>
@@ -175,38 +206,27 @@
     </div>
   </section>
 
-  <section id="download" class="download">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="kicker">Get the app</span>
+  <section id="download" class="closing">
+    <div class="wrap closing-grid">
+      <div class="get">
         <h2>Coming soon to Android and iPhone.</h2>
         <p>MAlert is free to download. Rides are paid by mobile money, cash or a Chango committee.</p>
-      </div>
-      <div class="stores">
-        <a class="store" aria-disabled="true" role="link" tabindex="-1">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8c-.3.3-.4.7-.4 1.2v18c0 .5.1.9.4 1.2l10-10.2L3.6 1.8Zm11.4 9.1 2.9-2.9L5.4.8c-.4-.2-.8-.3-1.1-.2l10.7 10.3Zm0 2.2L4.3 23.4c.3.1.7 0 1.1-.2l12.5-7.2-2.9-2.9Zm6.3-2.9-2.8-1.6-3.2 3.2 3.2 3.2 2.8-1.6c.9-.5.9-2.7 0-3.2Z"/></svg>
-          <span><small>Coming soon on</small><b>Google Play</b></span>
-        </a>
-        <a class="store" aria-disabled="true" role="link" tabindex="-1">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2.1-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.1ZM13.9 4.9c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.4-.6 3.1-1.5Z"/></svg>
-          <span><small>Coming soon on the</small><b>App Store</b></span>
-        </a>
-      </div>
-      <p class="soon">Facilities, riders and committees who want to join: <a href="mailto:okodetechltd@gmail.com?subject=Joining%20MAlert">get in touch</a>.</p>
-    </div>
-  </section>
-
-  <section id="contact" style="padding-top: 0">
-    <div class="wrap">
-      <div class="contact">
-        <div>
-          <h2>Bring MAlert to your district.</h2>
-          <p>We work with health facilities, rider groups and community committees to set up zones, approve riders and onboard staff.</p>
+        <div class="stores">
+          <span class="store" role="img" aria-label="Coming soon on Google Play">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8c-.3.3-.4.7-.4 1.2v18c0 .5.1.9.4 1.2l10-10.2L3.6 1.8Zm11.4 9.1 2.9-2.9L5.4.8c-.4-.2-.8-.3-1.1-.2l10.7 10.3Zm0 2.2L4.3 23.4c.3.1.7 0 1.1-.2l12.5-7.2-2.9-2.9Zm6.3-2.9-2.8-1.6-3.2 3.2 3.2 3.2 2.8-1.6c.9-.5.9-2.7 0-3.2Z"/></svg>
+            <span><small>Coming soon on</small><b>Google Play</b></span>
+          </span>
+          <span class="store" role="img" aria-label="Coming soon on the App Store">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2.1-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.1ZM13.9 4.9c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.4-.6 3.1-1.5Z"/></svg>
+            <span><small>Coming soon on the</small><b>App Store</b></span>
+          </span>
         </div>
-        <div class="contact-actions">
-          <a class="btn" href="mailto:okodetechltd@gmail.com?subject=MAlert%20partnership">Email okodetechltd@gmail.com</a>
-          <p>Okode Technology · Accra, Ghana</p>
-        </div>
+      </div>
+      <div id="contact" class="partner">
+        <h2>Bring MAlert to your district.</h2>
+        <p>We work with health facilities, rider groups and community committees to set up zones, approve riders and onboard staff.</p>
+        <a class="btn gold" href="mailto:okodetechltd@gmail.com?subject=MAlert%20partnership">Email us about a partnership</a>
+        <p class="addr">Okode Technology, Accra, Ghana<br><a href="mailto:okodetechltd@gmail.com">okodetechltd@gmail.com</a></p>
       </div>
     </div>
   </section>
@@ -214,13 +234,72 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Okode Technology</span>
+    <a class="brand" href="./"><img src="logo.png" alt="" width="32" height="32">MAlert</a>
     <nav aria-label="Legal">
       <a href="privacy.html">Privacy policy</a>
       <a href="delete-account.html">Delete your account</a>
       <a href="mailto:okodetechltd@gmail.com">Contact</a>
     </nav>
+    <span class="copy">© 2026 Okode Technology</span>
   </div>
 </footer>
+
+<script>
+(function () {
+  // One clock drives the trip: the rider's route draws to her, a short pickup pause,
+  // then her route draws on to the facility. Chips appear as each step happens.
+  var trip = document.querySelector('.trip'), path = document.getElementById('ride'), dot = document.getElementById('rider');
+  if (!trip || !path || !path.getTotalLength) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var leg1 = trip.querySelector('.route-rider'), leg2 = trip.querySelector('.route-trip');
+  var chips = [[0, '.chip-sos'], [.42, '.chip-rider'], [.98, '.chip-facility']].map(function (c) { return [c[0], trip.querySelector(c[1])]; });
+  var len = path.getTotalLength(), SPLIT = .44, start = null, delay = 500, dur = 4600;
+  function ease(t) { return t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; }
+  function at(p) { // 0-40% of the time: to her; 40-50%: pickup; 50-100%: to the facility
+    if (p < .4) return SPLIT * ease(p / .4);
+    if (p < .5) return SPLIT;
+    return SPLIT + (1 - SPLIT) * ease((p - .5) / .5);
+  }
+  function render(p) {
+    var f = at(p), pt = path.getPointAtLength(f * len);
+    dot.setAttribute('cx', pt.x); dot.setAttribute('cy', pt.y);
+    leg1.style.strokeDashoffset = 1 - Math.min(f / SPLIT, 1);
+    leg2.style.strokeDashoffset = 1 - Math.max((f - SPLIT) / (1 - SPLIT), 0);
+    chips.forEach(function (c) { if (c[1]) c[1].classList.toggle('on', p >= c[0]); });
+  }
+  trip.classList.add('play');
+  render(0);
+  function tick(now) {
+    if (start === null) start = now;
+    var p = Math.min(Math.max((now - start - delay) / dur, 0), 1);
+    render(p);
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(function () { requestAnimationFrame(tick); });
+})();
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  if (!tabs.length) return;
+  function select(tab, focus) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) tab.focus();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(t); });
+    t.addEventListener('keydown', function (e) {
+      var n = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!n) return;
+      e.preventDefault();
+      select(tabs[(i + n + tabs.length) % tabs.length], true);
+    });
+  });
+  select(tabs[0]);
+})();
+</script>
 </body>
 </html>
