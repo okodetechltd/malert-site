@@ -1,0 +1,5 @@
+# The APK is deployed to Firebase Hosting from a local copy, never committed
+# (it is ~70 MB per version). Build it in the app repo and copy it here.
+public/downloads/*.apk
+.firebase/
+firebase-debug.log
