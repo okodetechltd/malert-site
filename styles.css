@@ -274,6 +274,17 @@ section { padding: 112px 0; }
 .store small { display: block; font-size: .74rem; color: var(--on-forest-dim); line-height: 1.2; }
 .store b { display: block; font-size: 1.1rem; line-height: 1.25; color: #fff; }
 .partner .btn { margin-top: 32px; }
+.get .dl { margin-top: 28px; min-height: 56px; padding: 0 28px; font-size: 1.05rem; }
+.dl-meta { font-size: .9rem; color: var(--on-forest-dim); }
+.closing p.dl-meta { margin-top: 12px; }
+.install { margin: 24px 0 0; padding-left: 1.3rem; max-width: 32em; color: var(--on-forest); }
+.install li { margin-top: 8px; }
+.install li::marker { color: var(--gold); font-weight: 800; }
+.install b { color: #fff; }
+.checksum { margin-top: 18px; font-size: .88rem; color: var(--on-forest-dim); }
+.checksum summary { cursor: pointer; font-weight: 600; }
+.checksum code { font-size: .78rem; word-break: break-all; color: var(--on-forest); }
+.closing .checksum p { margin-top: 8px; }
 .addr { font-size: .95rem; color: var(--on-forest-dim); }
 .addr a { color: var(--gold); }
 
